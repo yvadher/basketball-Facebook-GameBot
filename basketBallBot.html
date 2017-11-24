@@ -70,11 +70,20 @@
 <h2>basketBallBot.sikuli</h2> <a href="basketBallBot.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-Settings.MoveMouseDelay = <span class="dig">0.1</span>
+<span class="kw">import</span> time
+
+
+Settings.MoveMouseDelay = <span class="dig">0.3</span>
+
 <span class="skw">wait</span>(<img src="1511519641842.png" />)
 
 <span class="kw">for</span> i <span class="kw">in</span> range(<span class="dig">40</span>):
-        <span class="skw">dragDrop</span>(Pattern(<img src="1511519708984.png" />).targetOffset(-<span class="dig">2</span>,<span class="dig">18</span>), Pattern(<img src="1511519720025.png" />).targetOffset(-<span class="dig">1</span>,-<span class="dig">54</span>))
+        <span class="kw">if</span> (exists(<span class="str">"__CLICK-TO-CAPTURE__"</span>)):
+
+        drag(Pattern(<img src="1511519708984.png" />).targetOffset(-<span class="dig">1</span>,<span class="dig">18</span>))
+        dropAt(Pattern(<img src="1511519720025.png" />).targetOffset(-<span class="dig">1</span>,-<span class="dig">59</span>))
+        <span class="cmt">##dragDrop(Pattern("1511519708984.png").targetOffset(-1,18),Pattern("1511519720025.png").targetOffset(-1,-59) )</span>
+
 </pre>
 </body>
 </html>
